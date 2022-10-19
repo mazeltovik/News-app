@@ -1,0 +1,123 @@
+body {
+    color: #fff;
+    background: #17181c;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+.nav {
+    border-bottom: 1px solid #eef1f6;
+}
+.nav__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 0rem 1rem;
+    right: 0;
+}
+.nav__toggle svg {
+    width: 1.5rem;
+    fill: #2a324b;
+}
+.nav__toggle .menu:hover{
+    fill:#fff;
+    transition: 0.5s;
+}
+
+.nav__toggle .close:hover{
+    fill:red;
+    transition: 0.5s;
+}
+.nav__toggle .close {
+    display: none;
+}
+.nav__toggle .menu {
+    margin-top: 0.2rem;
+}
+.nav__checkbox {
+    display: none;
+}
+#nav__checkbox:checked ~ label.nav__toggle .close {
+    display: block;
+} 
+#nav__checkbox:checked ~ label.nav__toggle .menu {
+    display: none;
+}
+footer {
+    padding: 10px 30px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .copyright {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+footer .copyright a {
+    color: #444;
+}
+footer .copyright a:hover {
+    color: #555;
+}
+footer .copyright:before {
+    content: '©';
+}
+.logo{
+    width: 210px;
+    height: 100%;
+}
+
+.logo__link{
+    display: block;
+    width: 200px;
+    height: 74px;
+    background-image: url('images/rs_school_logo.svg');
+    background-size: cover;
+}
+
+.github__logo{
+    margin-right: auto;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url('images/github-brands.svg');
+    background-size: cover;
+}
+
+@media (min-width: 320px) and (max-width: 821px) {
+
+    header {
+        padding-left: 8px;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: space-around;
+        height: 300px;
+    }
+    .logo{
+        height: 74px;
+    }
+    .logo p{
+        text-align: center;
+    }
+
+    .github__logo{
+        margin: 0px auto;
+    }
+
+
+
+}
